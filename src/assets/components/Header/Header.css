@@ -1,0 +1,105 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    background: rgb(30, 58, 138);
+}
+
+.left{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.logo{
+    width: 90px;
+    background: #1e3a8a;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.middle{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px
+}
+
+.search{
+    flex: 0.7;
+    width: 0px;
+    height: 30px;
+    border-top-left-radius: 120px;
+    border-bottom-left-radius: 120px;
+    margin-right: -2px;
+    background-color: rgb(239, 239, 239);
+    padding-left: 10px;
+}
+
+.search-button{
+    width: 40px;
+    height: 35px;
+    margin-top: 2.3px;
+    margin-bottom: 1px;
+    border-style: 1px solid;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    padding-right: 35px;
+    cursor: pointer;
+}
+
+.search-icon{
+    width: 20px;
+    margin-top: 2px;
+}
+
+.right{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.ham-button, .cart-button, .profile-button, .wishlist-button {
+    background-color:#1e3a8a;
+    border: none;
+    cursor: pointer;
+    padding: 5px 8px 5px 8px;
+}
+
+.ham-button:hover, .cart-button:hover, .profile-button:hover, .wishlist-button:hover{
+    background-color: rgb(245, 240, 240);
+    border-radius: 50px;
+}
+
+.ham-menu, .cart, .user-profile, .wishlist {
+    width: 20px;
+}
+
+.cart-button{
+    position: relative;
+    display: flex;
+}
+
+.cart-button p{
+    position: absolute;
+    top: -10px;
+    left: 25px;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 1px;
+    font-size: 10px;
+    width: 10px;
+}
+
