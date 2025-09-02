@@ -1,10 +1,6 @@
 .sidebar{
     position: fixed;
-<<<<<<< HEAD
     top: 75px;
-=======
-    top: 70px;
->>>>>>> 478dbc9d59647b8d7d6ed202f44ca5ed8c7d2520
     bottom: 0;
     left: 0;
     display: flex;
@@ -16,10 +12,7 @@
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 2px rgba(0,0,0,0.4);
-<<<<<<< HEAD
     z-index: 200;
-=======
->>>>>>> 478dbc9d59647b8d7d6ed202f44ca5ed8c7d2520
 }
 
 .head-container{
@@ -75,7 +68,6 @@ a:hover{
 
 .discount{
     width: 650px;
-<<<<<<< HEAD
 }
 
 @media(max-width: 750px){
@@ -91,6 +83,4 @@ a:hover{
     .main{
         margin-left: 0;
     }
-=======
->>>>>>> 478dbc9d59647b8d7d6ed202f44ca5ed8c7d2520
 }

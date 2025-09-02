@@ -15,11 +15,7 @@ import health from "./side-image/healthcare.png"
 function Sidebar(){
     return(
         <aside className="sidebar">
-<<<<<<< HEAD
             <div className="main-body"> 
-=======
-            <div class="main-body"> 
->>>>>>> 478dbc9d59647b8d7d6ed202f44ca5ed8c7d2520
                     <div className="head-container">
                         <div className="side-head">Categories</div>
                     </div>
@@ -70,11 +66,7 @@ function Sidebar(){
 
                     <div className="container">
                         <img src={health} className="side"/>
-<<<<<<< HEAD
                         <a href="#health">Health Care</a>
-=======
-                        <a href="">Health Care</a>
->>>>>>> 478dbc9d59647b8d7d6ed202f44ca5ed8c7d2520
                     </div>
             </div>
     </aside>
