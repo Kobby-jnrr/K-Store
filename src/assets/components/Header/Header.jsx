@@ -1,10 +1,11 @@
-import "./Header.css"
-import Search from "./head-image/Search.png"
-import Ham from "./head-image/interface.png"
-import Wishlist from "./head-image/wishlist.png"
-import Cart from "./head-image/Cart.png"
-import Profile from "./head-image/user.png"
-import logo from "./head-image/web-logo.png"
+import "./Header.css";
+import {Link} from "react-router-dom";
+import Search from "./head-image/Search.png";
+import Ham from "./head-image/interface.png";
+import Wishlist from "./head-image/wishlist.png";
+import Cart from "./head-image/Cart.png";
+import Profile from "./head-image/user.png";
+import logo from "./head-image/web-logo.png";
 
 
 function Header({totalItems}){
@@ -15,7 +16,7 @@ function Header({totalItems}){
             </div>
             
             <div className="middle">
-                <input type="text" className="search" placeholder="Search for products, catergories or brands..."/>
+                <input type="text" className="search" placeholder="Search for products, categories or brands..."/>
                 <button className="search-button">
                     <img src={Search} className="search-icon"/>
                 </button>   
@@ -28,10 +29,12 @@ function Header({totalItems}){
                 <button className="wishlist-button">
                     <img src={Wishlist} className="wishlist"/>
                 </button>
-                <button className="cart-button">
-                    <img src={Cart} className="cart" alt="Cart"/>
-                    <p id="cartCount">{totalItems}</p>
-                </button>
+                <Link to={"/cartPage"}>
+                    <button className="cart-button">
+                    <   img src={Cart} className="cart" alt="Cart"/>
+                        <p id="cartCount">{totalItems}</p>
+                    </button>
+                </Link>
                 <button className="profile-button">
                     <img src={Profile} className="user-profile" alt="Profile"/>
                 </button>

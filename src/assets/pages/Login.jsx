@@ -1,5 +1,7 @@
 import React, {useState} from "react";
-import "./Login.css"
+import {Link} from "react-router-dom";
+import "./Login.css";
+import logo from "../components/Header/head-image/web-logo.png";
 
 function LoginPage({setUser}) {
   const [form, setForm] = useState({
@@ -21,36 +23,39 @@ function LoginPage({setUser}) {
   };
 
   return (
-    <div className="login-page">
-      <h1>Sign Up</h1>
-      <form onSubmit={submitted}>
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          value={form.username}
-          onChange={changed}
-         
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={changed}
-        
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={form.password}
-          onChange={changed}
-        
-        />
-        <button type="submit">Create Profile</button>
-      </form>
-    </div>
+      <div className="login-page">
+        <img src={logo} className="weblogo"/>
+        <h1>Sign In</h1>
+        <form onSubmit={submitted}>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            value={form.username}
+            onChange={changed}
+          
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={form.email}
+            onChange={changed}
+          
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={form.password}
+            onChange={changed}
+          
+          />
+          <button type="submit">Login</button>
+          <p>Don't have an account yet? {""}
+            <Link to="/signup" className="link">Click here</Link></p>
+        </form>
+      </div>
   );
 }
 

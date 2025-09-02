@@ -37,23 +37,30 @@ function Home({cart, setCart}) {
 
   
 
-  const addToCart = (id) => {
-    setCart({ ...cart, [id]: 1 });
-  };
+  const addToCart = (product) => {
+  setCart({ ...cart, [product.id]: { ...product, quantity: 1 } });
+};
 
-  const increase = (id) => {
-    setCart({ ...cart, [id]: cart[id] + 1 });
-  };
+const increase = (id) => {
+  setCart({ 
+    ...cart, 
+    [id]: { ...cart[id], quantity: cart[id].quantity + 1 } 
+  });
+};
 
-  const decrease = (id) => {
-    if (cart[id] > 1) {
-      setCart({ ...cart, [id]: cart[id] - 1 });
-    } else {
-      const newCart = { ...cart };
-      delete newCart[id];
-      setCart(newCart);
-    }
-  };
+const decrease = (id) => {
+  if (cart[id].quantity > 1) {
+    setCart({ 
+      ...cart, 
+      [id]: { ...cart[id], quantity: cart[id].quantity - 1 } 
+    });
+  } else {
+    const newCart = { ...cart };
+    delete newCart[id];
+    setCart(newCart);
+  }
+};
+
 
   return (
     <div className="product-list">
@@ -64,16 +71,15 @@ function Home({cart, setCart}) {
           <p>${item.price}</p>
 
           {!cart[item.id] ? (
-            <button className="add-btn" onClick={() => addToCart(item.id)}>
-              Add to Cart
-            </button>
+            <button className="add-btn" onClick={() => addToCart(item)}>Add to Cart</button>
           ) : (
-            <div className="counter">
-              <button onClick={() => decrease(item.id)}>-</button>
-              <span>{cart[item.id]}</span>
-              <button onClick={() => increase(item.id)}>+</button>
-            </div>
+          <div className="counter">
+            <button onClick={() => decrease(item.id)}>-</button>
+            <span>{cart[item.id].quantity}</span>
+            <button onClick={() => increase(item.id)}>+</button>
+          </div>
           )}
+
         </div>
       ))}
     </div>

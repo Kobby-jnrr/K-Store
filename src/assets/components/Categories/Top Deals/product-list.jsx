@@ -3,36 +3,7 @@ import "./product-list.css";
 function ProductList({cart, setCart}) {
 
   const products = [
-    { 
-    id: 0o05, 
-    title: "Sneakers", 
-    price: 72.99, 
-    image: "/fashion/shoe2.jpg" 
-    },
-    { 
-    id: 603, 
-    title: "Real Madrid Jersey", 
-    price: 599, 
-    image: "/sports/madrid.jpg"
-    },
-    { 
-    id: 204, 
-    title: "Portable Wadrobe", 
-    price: 9, 
-    image: "/home/wadrobe.jpg" 
-    },
-     { 
-    id: 502, 
-    title: "Makeup Kit", 
-    price: 129, 
-    image: "/beauty/1 (13).jpg"
-    },
-    { 
-    id: 702, 
-    title: "Controller", 
-    price: 129, 
-    image: "/gaming/gamepad2.jpg" 
-    },
+  
   ];
 
   

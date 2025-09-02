@@ -6,10 +6,10 @@ body{
   width: 300px;
   border-radius: 10px;
   margin-bottom: 10px;
-  margin-top: -20vh;
+  margin-top: -18vh;
 }
 
-.login-page {
+.SignUp {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -19,7 +19,7 @@ body{
   background: linear-gradient(rgb(128, 168, 128), rgb(64, 64, 90));
 }
 
-.login-page h1 {
+.SignUp h1 {
   margin-bottom: 20px;
   color: black;
 }
@@ -46,7 +46,7 @@ form input:focus {
 }
 
 form button {
-  padding: 10px;
+  padding: 10px 23.9vh 10px 23.9vh;
   background: #007bff;
   color: white;
   border: none;
@@ -58,6 +58,4 @@ form button:hover {
   background: #0965c7;
 }
 
-.link{
-  color: #007bff;
-}
+

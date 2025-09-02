@@ -28,6 +28,10 @@
     margin-bottom: 8px;
 }
 
+.add-btn:hover{
+    background: #0767ce;;
+}
+
 .counter{
     display: flex;
     align-items: center;
