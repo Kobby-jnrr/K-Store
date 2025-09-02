@@ -3,12 +3,20 @@ header{
     top: 0;
     left: 0;
     right: 0;
+<<<<<<< HEAD
     height: 65px;
+=======
+    height: 60px;
+>>>>>>> 478dbc9d59647b8d7d6ed202f44ca5ed8c7d2520
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 10px;
+<<<<<<< HEAD
     background: rgb(30, 58, 138);
+=======
+    background: #1e3a8a;
+>>>>>>> 478dbc9d59647b8d7d6ed202f44ca5ed8c7d2520
 }
 
 .left{
@@ -18,6 +26,7 @@ header{
     margin-top: 8px;
 }
 
+<<<<<<< HEAD
 .logo{
     width: 90px;
     background: #1e3a8a;
@@ -37,6 +46,15 @@ header{
 .search{
     flex: 0.7;
     width: 0px;
+=======
+.middle{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    width: 100px;
+>>>>>>> 478dbc9d59647b8d7d6ed202f44ca5ed8c7d2520
     height: 30px;
     border-top-left-radius: 120px;
     border-bottom-left-radius: 120px;
@@ -69,14 +87,22 @@ header{
     margin-right: 20px;
 }
 
+<<<<<<< HEAD
 .ham-button, .cart-button, .profile-button, .wishlist-button {
+=======
+.ham-button, .cart-button, .profile-button, .wishlist-button{
+>>>>>>> 478dbc9d59647b8d7d6ed202f44ca5ed8c7d2520
     background-color:#1e3a8a;
     border: none;
     cursor: pointer;
     padding: 5px 8px 5px 8px;
 }
 
+<<<<<<< HEAD
 .ham-button:hover, .cart-button:hover, .profile-button:hover, .wishlist-button:hover{
+=======
+.ham-button:hover, .cart-button:hover, .profile-button:hover, .wishlist:hover{
+>>>>>>> 478dbc9d59647b8d7d6ed202f44ca5ed8c7d2520
     background-color: rgb(245, 240, 240);
     border-radius: 50px;
 }

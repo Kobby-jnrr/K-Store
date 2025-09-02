@@ -12,9 +12,13 @@
   "dependencies": {
     "firebase": "^12.1.0",
     "react": "^19.1.1",
+<<<<<<< HEAD
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.8.2",
     "uuid": "^11.1.0"
+=======
+    "react-dom": "^19.1.1"
+>>>>>>> 478dbc9d59647b8d7d6ed202f44ca5ed8c7d2520
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
