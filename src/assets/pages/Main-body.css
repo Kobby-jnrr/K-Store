@@ -1,6 +1,11 @@
 .main{
+<<<<<<< HEAD
     margin-left: 230px;
     margin-top: 65px;
+=======
+    margin-left: 220px;
+    margin-top: 60px;
+>>>>>>> 478dbc9d59647b8d7d6ed202f44ca5ed8c7d2520
     padding: 10px;
 }
 .promo{
@@ -37,6 +42,7 @@
 }
 
 section{
+<<<<<<< HEAD
      padding-top: 6dvh;
 }
 
@@ -51,3 +57,9 @@ section{
         margin-left: 0;
     }
 }
+=======
+     padding-top: 50px;
+}
+
+
+>>>>>>> 478dbc9d59647b8d7d6ed202f44ca5ed8c7d2520
