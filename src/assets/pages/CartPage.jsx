@@ -16,7 +16,7 @@ function CartPage({ cart, setCart }) {
   return (
     <div className="carter">
       {Object.values(cart).length === 0 ? (
-        <h2>Your cart is empty</h2>
+        <p className="empty">Your cart is empty</p>
       ) : (
         <>
           <div className="headers">
@@ -89,4 +89,4 @@ function CartPage({ cart, setCart }) {
   );
 }
 
-export default CartPage;
+export default CartPage

@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, useLocation,} from "react-router-dom";
 import Header from "./assets/components/Header/Header.jsx";
 import Sidebar from "./assets/components/Sidebar/Sidebar.jsx";
 import Main from "./assets/pages/Main-body.jsx";

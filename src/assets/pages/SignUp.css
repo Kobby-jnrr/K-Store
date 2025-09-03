@@ -58,4 +58,14 @@ form button:hover {
   background: #0965c7;
 }
 
+.errMsg{
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
 
+.successMsg{
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+}

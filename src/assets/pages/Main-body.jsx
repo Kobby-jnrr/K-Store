@@ -1,5 +1,4 @@
 import "./Main-body.css"
-import ProductList from "../components/Categories/Top Deals/product-list"
 import Fashion from "../components/Categories/Fashion/fashion";
 import Electronics from "../components/Categories/Electronics/electronics";
 import Home from "../components/Categories/Home/home";
@@ -18,10 +17,7 @@ function Main({cart, setCart}){
                 <span>Grab your deal now!!!!!!</span>
                 <div className="countdown" id="countdown"></div>
             </div>
-            <section id="deals" className="deals">
-                <h2>Top Deals</h2>
-                <ProductList cart = {cart} setCart={setCart}/>
-            </section>
+           
 
             <section id="fashion">
                 <h2>Fashion and Apparel</h2>

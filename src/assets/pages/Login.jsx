@@ -1,14 +1,38 @@
 import React, {useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import "./Login.css";
 import logo from "../components/Header/head-image/web-logo.png";
+import {auth} from "./Firebase";
+import { signInWithEmailAndPassword} from "firebase/auth";
 
 function LoginPage({setUser}) {
+  const navigate = useNavigate();
+
   const [form, setForm] = useState({
-    username: "",
     email: "",
     password: "",
   });
+
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
+  const mapAuthError = (err) => {
+    switch (err.code) {
+      case "auth/invalid-credential":
+        return "Invalid email or Password";
+      case "auth/user-not-found":
+        return "No account found. Please check details.";
+      case "auth/wrong-password":
+        return "Incorrect Password.";
+      case "auth/invalid-email":
+        return "Please enter a valid email.";
+      case "auth/network-request-failed":
+        return "Network error. Check your connection and try again.";
+      default:
+        return err.message || "Something went wrong. Try again.";
+    }
+  };
+  
 
   const changed = (e) => {
     setForm({
@@ -17,9 +41,17 @@ function LoginPage({setUser}) {
     });
   };
 
-  const submitted = (e) => {
+  const submitted = async(e) => {
     e.preventDefault();
-    setUser(form);
+
+    try {
+      const userDetails = await signInWithEmailAndPassword(auth, form.email, form.password);
+      const user = userDetails.user;
+      setUser(user);
+    } catch (err) {
+      setError(mapAuthError(err));
+      console.error(err);
+    }
   };
 
   return (
@@ -28,20 +60,12 @@ function LoginPage({setUser}) {
         <h1>Sign In</h1>
         <form onSubmit={submitted}>
           <input
-            type="text"
-            name="username"
-            placeholder="Username"
-            value={form.username}
-            onChange={changed}
-          
-          />
-          <input
             type="email"
             name="email"
             placeholder="Email"
             value={form.email}
             onChange={changed}
-          
+            required
           />
           <input
             type="password"
@@ -49,12 +73,13 @@ function LoginPage({setUser}) {
             placeholder="Password"
             value={form.password}
             onChange={changed}
-          
+            required
           />
           <button type="submit">Login</button>
           <p>Don't have an account yet? {""}
             <Link to="/signup" className="link">Click here</Link></p>
         </form>
+        {error && <p className="errMsg">{error}</p>}
       </div>
   );
 }

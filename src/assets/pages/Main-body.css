@@ -13,10 +13,6 @@
     margin-top: 5px;
 }
 
-.deals{
-    padding: 0;
-}
-
 .product-list{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -37,7 +33,7 @@
 }
 
 section{
-     padding-top: 6dvh;
+     padding-top: 3vh;
 }
 
 @media(max-width: 750px){
